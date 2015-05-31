@@ -13,4 +13,9 @@
 8. 每次修改，如果不add到暂存区，那就不会加入到commit中。简单说，
    每一次修改都应该git add filename添加到暂存区，然后再git commit -m "提交备注"。
    否则只是将暂存区的内容提交到版本管理。
-   
+9. 如果你想放弃工作区修改的内容时，可以使用命令git checkout -- fileName。
+10.当你将工作区的内容已经放到暂存区时，但是又想放弃该文件的修改。可以分两步：
+    1)git reset HEAD fileName将文件回退到版本状态且清除了git add存放在暂存区的信息。
+	2)git checkout -- fileName将文件从版本中还原。
+11.当你提交到版本库时，又想放弃提交。可以使用git reset HEAD^回退到上一个版本。
+   (前提是没有提交到远程版本库)
