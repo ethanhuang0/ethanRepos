@@ -29,6 +29,13 @@
    完成了同步，这点是非常方便。
 15.要克隆一个仓库，首先必须知道仓库的地址，然后使用git clone命令克隆。
    Git支持多种协议，包括https，但通过ssh支持的原生git协议最快。
+16.Git鼓励大量使用分支：
+   1) 查看分支：git branch(*表示当前分支)
+   2) 创建分支: git branch <name>
+   3) 切换分支: git checkout <name>
+   4) 创建+切换分支: git checkout -b <name>
+   5) 合并某分支到当前分支: git merge <name>
+   6) 删除分支: git branch -d <name>
 
 
 
