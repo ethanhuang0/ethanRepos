@@ -45,7 +45,11 @@
 20.分支策略几个原则:
    1)master分支应该是非常稳定，仅用来发布最新版本，平时不在上面工作
    2)工作都在dev分支上。即dev分支不稳定，到发布的时候，再将dev分支合并到master上。
-21.
+21.修复Bug时，我们会通过创建新的Bug分支进行修复，然后合并最后删除。
+   当手头工作没有完成时，先把工作现场git stash一下，然后去修改Bug。
+   修复后，再用git stash pop或git stash apply回到工作现场。
+   一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除。
+   另一种方式是用git stash pop，恢复的同时把stash内容也删了。
 
 
 
