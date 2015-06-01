@@ -39,7 +39,13 @@
 17.Git用<<<<<<< and ======= and >>>>>>>标记出不同分支的内容。
    当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
 18.用git log --graph命令可以看到分支合并图：如git log --graph --pretty=oneline --abbrev-commit
-19.
+19.合并分支时, Git会用Fast forward模式这种模式下，删除分支后，会丢掉分支信息。
+   强制禁用Fast forward模式, Git会在merge时生成一个新的commit, 这样就可以从分支历史上看到分支信息。
+   如: git merge --no-ff -m "备注信息" <分支名name>
+20.分支策略几个原则:
+   1)master分支应该是非常稳定，仅用来发布最新版本，平时不在上面工作
+   2)工作都在dev分支上。即dev分支不稳定，到发布的时候，再将dev分支合并到master上。
+21.
 
 
 
