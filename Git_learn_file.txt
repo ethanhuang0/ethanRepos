@@ -50,6 +50,20 @@
    修复后，再用git stash pop或git stash apply回到工作现场。
    一是用git stash apply恢复，但是恢复后，stash内容并不删除，你需要用git stash drop来删除。
    另一种方式是用git stash pop，恢复的同时把stash内容也删了。
+22.开发一个新功能，最好新建分支;
+23.如果要丢弃一个没有被合并过的分支，可以通过git branch -D <name>来强行删除。
+24.查看远程库信息，使用git remote -v;
+25.本地新建的分支如果不推送到远程，对其他人就是不可见的;
+26.从本地推送分支，使用git push origin branch-name, 如果推送失败，先用git pull抓取远程的新提交。
+27.从本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name, 本地和远程
+   分支的名称最好一致。
+28.建立本地分支和远程分支的关联，使用git branch  --set-upstream branch-name origin/branch-name;
+29.从远程抓取分支，使用git pull, 如果有冲突，要先处理冲突。
+   1)首先，可以试图用git push origin branch-name推送自己的修改；
+   2)如果推送失败，则因为远程分支比你的本地更新，需要先用git pull试图合并；
+   3)如果合并有冲突，则解决冲突，并在本地提交；
+   4)没有冲突或者解决掉冲突后，再用git push origin branch-name推送就能成功！
+
 
 
 
